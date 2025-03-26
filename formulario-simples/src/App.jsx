@@ -1,4 +1,5 @@
 import React from 'react';
+import { GrFormNext, GrFormPrevious } from 'react-icons/gr';
 
 const App = () => {
   return (
@@ -10,9 +11,18 @@ const App = () => {
       <div className="form-container">
         <p>etapas</p>
         <form>
+            <div className="inputs-container">
+                
+            </div>
           <div className="action">
-            <button type='button'>Voltar</button>
-            <button type='submit'>Avançar</button>
+            <button type='button'>
+              <GrFormPrevious />
+              <span>voltar</span>
+            </button>
+            <button type='submit'>
+              <span>Avançar</span>
+              <GrFormNext />
+            </button>
           </div>
         </form>
       </div>
