@@ -1,7 +1,13 @@
 import React from 'react';
 import { GrFormNext, GrFormPrevious } from 'react-icons/gr';
+import UserForm from './components/UserForm';
+import ReviewForm from './components/ReviewForm'; 
+import Tanks from './components/Tanks';
 
 const App = () => {
+
+    const formComponents=[
+        <UserForm/>,<ReviewForm/>,<Tanks/>]
   return (
     <div className='app'>
       <div className="header">
@@ -12,7 +18,7 @@ const App = () => {
         <p>etapas</p>
         <form>
             <div className="inputs-container">
-                
+                {formComponents[0]}
             </div>
           <div className="action">
             <button type='button'>
