@@ -22,7 +22,7 @@ const App = () => {
           <div className="inputs-container">
 
           </div>
-          <div className="actions">
+          <div className="action">
             <button type='button' onClick={() => changeStep(currentStep - 1)}>
               <GrFormPrevious />
               <span>voltar</span>
