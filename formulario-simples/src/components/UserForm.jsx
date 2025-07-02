@@ -9,4 +9,4 @@ function UserForm() {
   )
 }
 
-export default UserForm
+export default UserForm;

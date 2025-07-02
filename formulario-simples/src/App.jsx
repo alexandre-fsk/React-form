@@ -8,6 +8,8 @@ const App = () => {
 
     const formComponents=[
         <UserForm/>,<ReviewForm/>,<Tanks/>]
+
+    const [currentStep,currentComponent,changeStep] = useForm(formComponents);
   return (
     <div className='app'>
       <div className="header">
@@ -16,12 +18,12 @@ const App = () => {
       </div>
       <div className="form-container">
         <p>etapas</p>
-        <form>
-            <div className="inputs-container">
-                {formComponents[0]}
-            </div>
-          <div className="action">
-            <button type='button'>
+        <form onSubmit={(e) => changeStep(currentStep + 1, e)}>
+          <div className="inputs-container">
+
+          </div>
+          <div className="actions">
+            <button type='button' onClick={() => changeStep(currentStep - 1)}>
               <GrFormPrevious />
               <span>voltar</span>
             </button>
